@@ -1,8 +1,9 @@
 $(document).ready(function(){
   $('form#userAnswer').submit(function(event){
-    var sideOne = $('input#sideOne').val();
-    var sideTwo = $('input#sideTwo').val();
-    var sideThree = $('input#sideThree').val();
+    var responses = ["sideOne", "sideTwo","sideThree"];
+    responses.forEach(function(responses){
+      var userInput = $('input#' + responses).val();
+    });
     var result = sideOne === sideTwo;
     var resultTwo = sideOne === sideThree;
     var resultThree = sideTwo === sideThree;
